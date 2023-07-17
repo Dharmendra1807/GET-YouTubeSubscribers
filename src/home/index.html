@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Adding favicon -->
+  <link rel="icon" href="https://www.youtube.com/s/desktop/dc71232b/img/favicon_144x144.png" sizes="144x144">
+  <!-- title of project -->
+  <title>YouTube Subscribers</title>
+  <!-- Adding some CSS -->
+  <style>
+    * {
+      margin: 0px;
+    }
+
+    body {
+      background: rgb(63, 62, 71);
+      background: linear-gradient(126deg, rgb(44, 39, 44) 0%, rgba(171, 111, 65, 0.617) 53%, rgb(90, 86, 89) 100%);
+      height: 97vh;
+      
+      
+    }
+
+    hr {
+      color: rgb(18, 5, 5);
+    }
+  
+   .topic{
+    text-align: center;
+    font-size: xx-large;
+    color: rgb(35, 3, 54);
+      margin: 20px;
+      font-family: fantasy;
+   }
+
+  
+    .heading {
+     
+      color: rgb(20, 72, 27);
+      margin: 400px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .container {
+      margin: 0px 100px;
+    }
+
+    li {
+      margin: 30px;
+      font-size: x-large;
+      line-height: 1.6;
+    }
+
+    .linkedin {
+      color: rgb(103, 97, 99);
+      font-size: 20px;
+      font-family:cursive ;
+    }
+    .text{
+      text-align:right;
+    }
+
+    .linkedin:hover {
+      color: rgb(76, 14, 83);
+      font-weight: bold;
+      cursor: pointer;
+  
+    }
+
+    .routes {
+      color: rgb(38, 14, 159);
+      padding: 8px;
+      border-radius: 10px;
+      
+    }
+  
+
+    .routes:hover {
+      color: rgb(177, 12, 12);
+
+    }
+
+  
+    fieldset {
+  border: double;
+}
+
+label {
+  display: inline-block;
+   width: 100px;
+
+}
+
+fieldset legend {
+  font-size: xx-large;
+  display: inline;
+  padding: 0 2px;
+  border: none;
+  border-radius: 6px;
+  color: rgb(10, 10, 47);
+}
+
+
+    /* Adding media query */
+    @media only screen and (max-width: 768px) {
+      .container {
+        margin: 0px 10px;
+      }
+
+      body {
+        height: 100%;
+      }
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <!-- Home page -->
+  <div class="container">
+   
+
+          <h1 class="topic"> <u>Backend</u> <u>Project</u></h1>
+   
+          <h4 class="text">Made by  <a class="linkedin" href="https://www.linkedin.com/in/mayuri-khobragade/" target="_blank"> Mayuri Khobragade! </a></h4>
+    <hr style="margin-bottom: 100px;">
+   
+          <fieldset>
+           <legend >YouTube Subscribers</legend>
+           <h3>  <u class="heading"> The routes in this API are shown below</u></h3>
+           
+           <!-- Some info about routes -->
+           <ul>
+            
+            <li> See detailes of all  <i> subscribers</i>  in the database. Click Here:<a class="routes" href="/subscribers">/subscribers</a></li>
+            
+            <li>Provides detailes of all subscribers with only two fields <i> Name</i> and <i> subscribed Channel</i>. Click Here:<a class="routes" href="/subscribers/names">/subscribers/names</a> </li>
+            
+            <li>Provides the details of a <i>subscriber with the given ID</i>. Click Here:<a class="routes" href="/subscribers/64b1b9a6e9f29143fc8de7b5">/subscribers/:id</a></li>
+          </ul>
+          </fieldset>
+
+  </div>
+</body>
+
+</html>
