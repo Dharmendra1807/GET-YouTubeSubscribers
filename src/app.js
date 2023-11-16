@@ -5,13 +5,39 @@ const path = require('path')
 const subscriberModel = require("./models/subscribers");
 
 
+
+
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }));
+
+
+
+
+
+
+
+
+app.post('/', async (req, res) => {
+
+  const { name,
+    subscribedChannel,
+    subscribedDate } = req.body
+  await subscriberModel.create({
+    name,
+    subscribedChannel,
+    subscribedDate
+  })
+  res.json({ "message": "success" })
+})
+
 // Display the written message on the homepage to the client.
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/home/index.html'))
-  })
+  res.sendFile(path.join(__dirname, '/home/index.html'))
+})
 // 1. Get an array of all subscribers from the database
 app.get("/subscribers", async (req, res) => {
-  const subscribers = await subscriberModel.find().select("-__v");
+  const subscribers = await subscriberModel.find()
+
   res.json(subscribers);
 });
 // 2. Get an array of subscriber's name and subscribed channel from the database

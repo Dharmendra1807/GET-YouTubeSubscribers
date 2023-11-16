@@ -3,7 +3,7 @@ const subscriberModel = require('./models/subscribers')
 const data = require('./data')
 
 // Connect to DATABASE
-const DATABASE_URL = "mongodb+srv://dwivedieng:Dharmendra@123@cluster0.dp1nnlm.mongodb.net/?retryWrites=true&w=majority"
+const DATABASE_URL = "mongodb+srv://dharmendradwivedi1807:mPaTyXSY3y1p7xoR@cluster0.hyx0vxu.mongodb.net/myname?retryWrites=true&w=majority"
 mongoose.connect(DATABASE_URL,{ useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection
 db.on('error', (err) => console.log(err))
